@@ -1,4 +1,15 @@
 terraform {
+  required_providers {
+    azurerm = {
+      source  = "hashicorp/azurerm"
+      version = "~> 4.0"
+    }
+    random = {
+      source  = "hashicorp/random"
+      version = "~> 3.6"
+    }
+  }
+
   backend "azurerm" {
     resource_group_name  = "rg-crc2026-student-203-lab"
     storage_account_name = "michalsatf"
