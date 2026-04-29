@@ -10,12 +10,7 @@ terraform {
     }
   }
 
-  backend "azurerm" {
-    resource_group_name  = "rg-crc2026-student-203-lab"
-    storage_account_name = "michalsatf"
-    container_name       = "terraform"
-    key                  = "terraform.tfstate"
-  }
+  backend "azurerm" {}
 }
 
 provider "azurerm" {
